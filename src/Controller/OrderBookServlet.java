@@ -49,7 +49,7 @@ public class OrderBookServlet extends HttpServlet {
   			// TODO Auto-generated catch block
   			e.printStackTrace();
   		}
-            response.sendRedirect("orderbook.jsp");
+            response.sendRedirect("listorder.jsp");
 		
 }
 }
