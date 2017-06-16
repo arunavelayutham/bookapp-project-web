@@ -3,13 +3,13 @@ package test.dao;
 import java.time.LocalDate;
 
 import dao.bookDAO;
-import model.usermodel;
+import model.Book;
 
 public class usertestDAO {
 	
 	public static void main(String[] args) throws Exception {
 		 LocalDate L=LocalDate.parse("2017-06-08");
-        usermodel user = new usermodel();
+        Book user = new Book();
         user.setName("pri");
         user.setPrice(200);
         user.setPub_date(L);

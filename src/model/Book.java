@@ -3,7 +3,7 @@ package model;
 import java.sql.Date;
 import java.time.LocalDate;
 
-public class usermodel {
+public class Book {
 	private int id;
 	private String name;
 	private float price;

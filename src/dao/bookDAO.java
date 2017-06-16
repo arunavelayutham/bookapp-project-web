@@ -8,11 +8,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 import Util.ConnectionUtil;
-import model.usermodel;
+import model.Book;
 
 public class bookDAO {
 
-	public void register(usermodel user) throws Exception {
+	public void register(Book user) throws Exception {
 
 		Connection con = ConnectionUtil.getConnection();
 
@@ -29,11 +29,11 @@ public class bookDAO {
 
 	}
 
-	public List<usermodel> listbook() throws Exception {
+	public List<Book> listbook() throws Exception {
 		Connection con = ConnectionUtil.getConnection();
 		String sql = "select id, name ,price,pub_date,author_id from books";
 		PreparedStatement pst = con.prepareStatement(sql);
-		List<usermodel> bookList = new ArrayList<usermodel>();
+		List<Book> bookList = new ArrayList<Book>();
 
 		ResultSet rs = pst.executeQuery();
 		while (rs.next()) {
@@ -42,7 +42,7 @@ public class bookDAO {
 			float price = rs.getFloat("price");
 			Date pub_date = rs.getDate("pub_date");
 			int author_id = rs.getInt("author_id");
-			usermodel b = new usermodel();
+			Book b = new Book();
 			b.setId(id);
 			b.setName(name);
 			b.setPrice(price);
@@ -53,7 +53,7 @@ public class bookDAO {
 		}
 
 		System.out.println(bookList);
-		for (usermodel b : bookList) {
+		for (Book b : bookList) {
 
 			System.out.println(b);
 

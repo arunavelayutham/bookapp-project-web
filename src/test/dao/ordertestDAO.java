@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 import dao.orderDAO;
-import model.Ordermodel;
+import model.Order;
 
 
 
@@ -16,7 +16,7 @@ public class ordertestDAO {
 		
 		public static void main(String[] args) throws Exception {
 			 LocalDate L=LocalDate.parse("2017-06-13");
-	        Ordermodel user = new Ordermodel();
+	        Order user = new Order();
 	        user.setId(1);
 	        user.setUser_id(1);
 	        user.setBook_id(2);
@@ -28,9 +28,9 @@ public class ordertestDAO {
 	 
 	        orderDAO userDAO = new orderDAO();
 	      // userDAO.addorder(user);
-	        List<Ordermodel> orderList=userDAO.listorder();
+	        List<Order> orderList=userDAO.listorder();
 			 System.out.println(orderList);
-			 for (Ordermodel b: orderList){
+			 for (Order b: orderList){
 				 
 				 System.out.println(b);
 			 
