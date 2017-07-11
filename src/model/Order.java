@@ -9,6 +9,25 @@ public class Order {
 	private int quantity;
 	private String satus;
 	private LocalDate ordered_date;
+	private String userName;
+	private String bookName;
+	public String getBookName() {
+		return bookName;
+	}
+
+	public void setBookName(String bookName) {
+		this.bookName = bookName;
+	}
+
+
+
+	public String getUserName() {
+		return userName;
+	}
+
+	public void setUserName(String userName) {
+		this.userName = userName;
+	}
 
 	public int getId() {
 		return id;
@@ -61,7 +80,8 @@ public class Order {
 	@Override
 	public String toString() {
 		return "Order [id=" + id + ", user_id=" + user_id + ", book_id=" + book_id + ", quantity=" + quantity
-				+ ", satus=" + satus + ", ordered_date=" + ordered_date + "]";
+				+ ", satus=" + satus + ", ordered_date=" + ordered_date + ", userName=" + userName + ", bookName="
+				+ bookName + "]";
 	}
 
 

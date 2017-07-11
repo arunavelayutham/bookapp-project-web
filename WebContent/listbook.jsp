@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 
+<%@page import="model.users"%>
 <%@page import="model.Order"%>
 <%@page import="dao.orderDAO"%>
 <%@page import="model.Book"%>
@@ -11,6 +12,18 @@
 <title>List books</title>
 </head>
 <body>
+<%
+users user = (users) session.getAttribute("Logged_In_User");
+out.println("User:"+ user);
+if (user == null ) {
+	
+	response.sendRedirect("login.html");
+	
+}
+else
+{
+%>
+Welcome<%=user.getName() %>  ( <a href="LogoutServlet" > Logout </a>)
 <h3>list books</h3>
 <table border ="1">
 <tbody>
@@ -51,6 +64,11 @@ List<Book>bookList = bookDAO.listbook();
 
 </tbody>
 </table>
+
+
+<% }%>
+
+<a href="orderbook.jsp"> Add Order</a>
 </body>
 
 </html>

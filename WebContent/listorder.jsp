@@ -19,8 +19,8 @@
 			<thead>
 				<tr>
 					<th>id</th>
-					<th>user_id</th>
-					<th>book_id</th>
+					<th>userName</th>
+					<th>bookName</th>
 					<th>quantity</th>
 					<th>satus</th>
 					<th>Ordered_date</th>
@@ -33,9 +33,9 @@
 					for (Order b : orderList) {
 						out.println("<tr>");
 						out.println("<td>" + b.getId() + "</td>");
-						out.println("<td>" + b.getUser_id() + "</td>");
-						out.println("<td>" + b.getBook_id() + "</td>");
-						out.println("<td>" + b.getQuantity() + "</td>");
+						out.println("<td>" + b.getUserName() + "</td>");
+						out.println("<td>" + b.getBookName() + "</td>");
+                        out.println("<td>" + b.getQuantity() + "</td>");
 						out.println("<td>" + b.getSatus() + "</td>");
 						out.println("<td>" + b.getOrdered_date() + "</td>");
 						out.println("</tr>");
